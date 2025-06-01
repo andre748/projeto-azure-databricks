@@ -30,7 +30,7 @@ Azure Databricks para versionamento e organização de notebooks em ambientes de
 4. **Consulta SQL e Visualização**  
    - Criar um notebook SQL anexado ao cluster.  
    - Executar:
-     ```
+     ```python
      import pandas as pd
 
       url = 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-databricks/main/data/products.csv'
@@ -42,8 +42,11 @@ Azure Databricks para versionamento e organização de notebooks em ambientes de
 5. **Análise com DataFrame PySpark**  
    - No mesmo notebook, adicionar célula Python e executar:
      ```python
-     df = spark.sql("SELECT * FROM default.products")
-     df_filtrado = df.filter(df.Category == 'Road Bikes')
+     import pandas as pd
+
+     url = 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-databricks/main/data/products.csv'
+     df = pd.read_csv(url)
+     df_filtrado = df[df['Category'] == 'Road Bikes']
      display(df_filtrado)
      ```
    - Exibir o DataFrame filtrado mostrando somente produtos de “Road Bikes”.  
