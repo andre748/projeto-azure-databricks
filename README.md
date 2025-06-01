@@ -33,9 +33,9 @@ Azure Databricks para versionamento e organização de notebooks em ambientes de
      ```python
      import pandas as pd
 
-      url = 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-databricks/main/data/products.csv'
-      df = pd.read_csv(url)
-      display(df)
+     url = 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-databricks/main/data/products.csv'
+     df = pd.read_csv(url)
+     display(df)
      ```
    - Adicionar visualização “Bar”, definindo X = `Category` e Y = contagem de `ProductID`.  
 
