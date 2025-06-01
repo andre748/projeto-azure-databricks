@@ -30,8 +30,12 @@ Azure Databricks para versionamento e organização de notebooks em ambientes de
 4. **Consulta SQL e Visualização**  
    - Criar um notebook SQL anexado ao cluster.  
    - Executar:
-     ```sql
-     SELECT * FROM default.products;
+     ```
+     import pandas as pd
+
+      url = 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-databricks/main/data/products.csv'
+      df = pd.read_csv(url)
+      display(df)
      ```
    - Adicionar visualização “Bar”, definindo X = `Category` e Y = contagem de `ProductID`.  
 
